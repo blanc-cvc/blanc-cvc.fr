@@ -37,7 +37,7 @@
 <style>
 .displaynone { display: none }
 * { border:0; margin:0; padding:0; outline:0; position:relative; display:block; font-family:monospace; text-decoration:none; transform:scale(1) !important; touch-action:none !important; }
-html { overflow-x: hidden !important; font-size: 2.4vw; line-height:4vw; }
+html { overflow-x: hidden !important; overflow-y: scroll !important; font-size: 2.4vw; line-height:4vw; height: 100vh; width: 100vw; }
 body { background:white; padding:48px; }
 body > div { #background:pink;
 max-width:1280px; padding:16px 0; }
@@ -60,14 +60,19 @@ table > tbody > tr > td { text-align:right; }
 
 @media screen and (min-width:1377px) {
 	html { font-size:32px !important; }
-	body > div > div.inline > a > div:last-child { font-size:24px !important; }
+	body > div > div.inline > * > div:last-child { font-size:24px !important; }
 	body > div.texte-reduit > div { font-size:24px !important; }
 }
 
 
 @media screen and (max-width:720px) {
-	body > div > div.inline > a:first-child { margin-right:4px; }
-	body > div > div.inline > a:last-child { margin-left:4px; }
+	body > div > div.inline > *:first-child { margin-right:4px; }
+	body > div > div.inline > *:last-child { margin-left:4px; }
+	body { padding: 48px 12px; }
+}
+
+@media screen and (max-width:360px) {
+	body { padding: 48px 0; }
 }
 .logoblanc { width: 40vw; max-width: 512px; }
 </style>
